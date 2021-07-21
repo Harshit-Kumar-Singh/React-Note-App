@@ -12,11 +12,13 @@ export default function Todo() {
         return e!=todo;
       }))
   }
+  let initialTodo = [];
+  const [todos, settodos] = useState(initialTodo);
   const addTodo = (title,desc) =>{
     let sno;
     if(todos.length==0)
     {
-      sno=0;
+      sno=1;
     }
     else{
       sno = todos[todos.length-1].sno + 1;
@@ -28,7 +30,7 @@ export default function Todo() {
     }
     settodos([...todos,myTodo]);
   }
-  const [todos, settodos] = useState([]);
+  
   return (
     <div className="parent_todo">
       <div className="todos">

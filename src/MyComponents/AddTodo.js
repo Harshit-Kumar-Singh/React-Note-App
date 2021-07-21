@@ -4,13 +4,14 @@ export const AddTodo = ({addTodo}) => {
   const [title, settitle] = useState("")
   const [desc, setdesc] = useState("")
   const submit = (e) => {
+    e.preventDefault();
       if(!title || !desc){
           alert("title or description can not be empty");
       }
       else {
          addTodo(title,desc);
-         settitle("");
          setdesc("");
+         settitle("");
       }
   };
   return (
@@ -24,7 +25,7 @@ export const AddTodo = ({addTodo}) => {
                 Enter Title
               </label>
               <br />
-              <input type="text" name="Title" className="form-title" value={title} onChange={(e)=>settitle(e.target.value)}/>
+              <input type="text" name="Title" className="form-title" value={title} onChange={(e) => settitle(e.target.value)}/>
             </div>
             <div>
               <label htmlFor="Description" className="font_style">
@@ -32,7 +33,7 @@ export const AddTodo = ({addTodo}) => {
               </label>
               <br />
               <input
-                type="text" name="Description" className="form-description" value={desc} onChange={(e)=>setdesc(e.target.value)}/>
+                type="text" name="Description" className="form-description" value={desc} onChange={(e) => setdesc(e.target.value)}/>
             </div>
             <div className="button">
                 <button type = "submit" className="SaveButton">Save</button>
