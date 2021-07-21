@@ -3,8 +3,6 @@ import { SubTodo } from "./SubTodo";
 import { useState } from "react";
 import { AddTodo } from "./AddTodo";
 export default function Todo() {
-
- 
   
   const onDelete = (todo)=>{
       console.log("In Delete");
