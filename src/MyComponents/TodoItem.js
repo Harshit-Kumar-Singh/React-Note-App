@@ -8,11 +8,11 @@ export const TodoItem = ({ todoitem ,onDelete}) => {
       <div className="Note_section">
         <div className="title">
           <h3 className="font_style">Title</h3>
-          <p>{todoitem.title}</p>
+          <p className="line-height">{todoitem.title}</p>
         </div>
         <div className="title">
           <h3 className="font_style">Description</h3>
-          <p>{todoitem.description}</p>
+          <p className="line-height">{todoitem.description}</p>
         </div>
       </div>
 
